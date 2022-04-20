@@ -1,7 +1,7 @@
 import re
 gene11 = []
 gene = open(r'Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','r')
-gene = gene.read()  # open the fa file
+gene = gene.read()  # open the sequence file
 for list in gene:
     list = list.strip(r'\n')
 gene1 = gene.split('>') # create a list for each DNA sequence
