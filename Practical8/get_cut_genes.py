@@ -13,7 +13,7 @@ gene_names1 = gene_types.findall(gene)
 for i in range(len(gene_names1)):
     gene1.write('Gene: ' +  gene_names1[i][0] + '      count: ' + str(len(gene_names1[i][1])) + '\n')
     print(gene_names1[i][0] + ' has finished')
-gene1.closed
+gene1.close()
 print('The total number of DNA seq is ' + str(len(gene_names1)))
 
 
