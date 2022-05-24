@@ -6,4 +6,4 @@
 for i in range(1,11): # repeat the loop for 10 times
     sum = (i*(i+1))/2
     print(sum)
-# output the the number of triangles.
+# output the the number of triangles
