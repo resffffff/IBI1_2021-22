@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:output the value of n when it changes 10 times
+# Answer: this program generates a randon number ten times but only print the last one.
 
 # Import libraries
 # randint allows drawing a random number,
@@ -11,8 +11,12 @@ from random import randint
 from math import ceil
 
 progress=0
+# The while loop will repeat 10 times to create a random integer in range from 1 to 100.
 while progress<10:
 	progress+=1
 	n = randint(1,100)
 
+# print the last n
 print(n)
+
+# output just one random integer ranging from 1 to 100.
