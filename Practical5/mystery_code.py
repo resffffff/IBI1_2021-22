@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: this program generates a randon number ten times but only print the last one.
+# Answer: this program generates ten randon numbers, but only print the last one.
 
 # Import libraries
 # randint allows drawing a random number,
