@@ -12,7 +12,7 @@ for i in range(1, len(covid_data)):
 print(covid_data.loc[
           s, "total_cases"])  # I tried another way.
 
-print(covid_data.loc[0:81, "total_cases"])  # I find that it is the same
+print(covid_data.loc[0:81, "total_cases"])  
 date = []
 new_cases = []
 new_deaths = []
