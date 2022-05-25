@@ -1,0 +1,3 @@
+The figure is designed to show the new cases and the total cases in Spain.
+The subplot 5 is for this figure (list 75)
+This figure shows that the COVID-19 attached Spain mostly at the begining of 2020, and the total cases had reached to 80000 at the begining of the Spain.
