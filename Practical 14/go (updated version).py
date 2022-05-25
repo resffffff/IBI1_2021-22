@@ -11,10 +11,10 @@ print("The total number of terms is",len(terms))
 child_nodes = 0
 dict1 = {}
 defstr_id = []
-values1=[]
-value={}
-dict1={}
-new_dic={}
+values1 = []
+value = {}
+dict1 = {}
+new_dic = {}
 for term in terms:
     n = 0
     box = []
@@ -31,14 +31,14 @@ for i in dict1:
     new_dic[i] = []
 def recursion(a):
     new_dic[h] += dict1[a]
-    if len(dict1[a])!=0:
+    if len(dict1[a]) != 0:
         for x in dict1[a]:
             recursion(x)
 while True:   # vital terms are collected in the list and set properly
     for h in dict1.keys():
         recursion(h)
     for i in new_dic:
-        new_dic[i]=list(set(new_dic[i]))
+        new_dic[i] = list(set(new_dic[i]))
     for i in new_dic:
         for j in new_dic[i]:
             value[j] += 1
