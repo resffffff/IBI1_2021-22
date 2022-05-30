@@ -45,7 +45,6 @@ while True:   # vital terms are collected in the list and set properly
         recursion(h)
     for i in new_dic:
         new_dic[i] = list(set(new_dic[i]))
-    for i in new_dic:
         for j in new_dic[i]:
             value[j] += 1
     break
@@ -83,4 +82,3 @@ if average1 > average2:
     print('The average number of childnotes in all terms is bigger than that in translation terms')
 else:
     print('The average number of childnotes in all terms is smaller than that in translation terms')
-
