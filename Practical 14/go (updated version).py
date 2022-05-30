@@ -15,27 +15,33 @@ values1 = []
 value = {}
 dict1 = {}
 new_dic = {}
+is_list = []
 for term in terms:
     n = 0
+    m = 0
     box = []
-    id= term.getElementsByTagName('id')[0].childNodes[0].data
-    for i in term.getElementsByTagName('is_a'):
-        box.append(term.getElementsByTagName('is_a')[n].childNodes[0].data)
-        n = n + 1
+    id = term.getElementsByTagName('id')[0].childNodes[0].data
+    is_list = term.getElementsByTagName('is_a')
+    for i in range(len(is_list)):
+        box.append(is_list[i].childNodes[0].data)
     dict1[id] = box
  # obtain a loop dictionary including the dictionary of the id and its "is_a"
 for i in dict1:
-    value[i]=0
+    value[i] = 0
 
 for i in dict1:
     new_dic[i] = []
-def recursion(a):
+def recursion(a):  # This function is to find the childnodes from parentnodes and parent_childnodes
     new_dic[h] += dict1[a]
     if len(dict1[a]) != 0:
         for x in dict1[a]:
             recursion(x)
+dict_keys1 = []
+dict_keys = []
+for key in dict1.keys():
+    dict_keys.append(key) # I find there is some unexpected error if I directly used the keys of the dictionary, so I added it into another list.
 while True:   # vital terms are collected in the list and set properly
-    for h in dict1.keys():
+    for h in dict_keys:
         recursion(h)
     for i in new_dic:
         new_dic[i] = list(set(new_dic[i]))
@@ -69,7 +75,7 @@ plt.title("the distribution of childnodes of go_obo.xml with the tag of translat
 plt.ylabel("Childnodes number")
 plt.show()
 
-average1 = sum(values1)/len(value1)
+average1 = sum(values1)/len(values1)
 average2 = sum(value_tran)/len(value_tran)
 print("the average number of childnotes in all the terms is ",average1)
 print("the average number of childnotes in translation terms is ",average2)
@@ -78,13 +84,3 @@ if average1 > average2:
 else:
     print('The average number of childnotes in all terms is smaller than that in translation terms')
 
-
-
-
-
-
-
-# for j in range(len(terms)):
-#     fid_is_a(j)
-#     print(1)
-# print(len(is_a))
